@@ -20,13 +20,13 @@ export default async function AdminDashboardPage() {
     users: 1240,
     activeUsers: 312,
     tests: 86,
-    revenue: role === "superadmin" ? "₹1,24,000" : "Restricted",
+    revenue: role === "SUPERADMIN" ? "₹1,24,000" : "Restricted",
   };
 
   return (
     <div>
       <h1 className="text-2xl font-bold mb-6">
-        {role === "superadmin" ? "SuperAdmin Dashboard" : "Admin Dashboard"}
+        {role === "SUPERADMIN" ? "SuperAdmin Dashboard" : "Admin Dashboard"}
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -36,7 +36,7 @@ export default async function AdminDashboardPage() {
         <Card title="Revenue" value={stats.revenue} />
       </div>
 
-      {role === "superadmin" && (
+      {role === "SUPERADMIN" && (
         <div className="mt-8 p-4 border rounded bg-yellow-50">
           <h2 className="font-semibold mb-2">SuperAdmin Controls</h2>
           <p className="text-sm text-gray-700">
