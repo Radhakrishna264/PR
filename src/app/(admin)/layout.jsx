@@ -2,9 +2,9 @@
 
 import { redirect } from "next/navigation";
 import { getSession } from "../../lib/session";
-import Header from "../components/Header";
-import Sidebar from "./components/Sidebar";
-import Watermark from "../components/Watermark";
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+import Watermark from '../components/Watermark';
 
 export default async function AdminLayout({ children }) {
   const session = await getSession();
