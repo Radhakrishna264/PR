@@ -1,4 +1,4 @@
-import branding from "../../config/branding";
+import { branding } from "../../config/branding";
 
 export default function Watermark({ role = "USER" }) {
   return (
