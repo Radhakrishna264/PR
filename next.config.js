@@ -3,8 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+  // 🔴 MOST IMPORTANT
+  output: "export",
+
+  // 🔴 Cloudflare Pages ke liye
   images: {
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
 };
 
