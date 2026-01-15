@@ -47,7 +47,7 @@ export async function middleware(request) {
 
   // Read session (server authoritative)
   const isLoggedIn = request.cookies.has("session");
-const role = null; // USER | ADMIN | SUPERADMIN
+const role = request.cookies.get("role")?.value || null;
 
   // Auth routes
   if (AUTH_ROUTES.some(route => pathname === route || pathname.startsWith(route + "/"))) {
