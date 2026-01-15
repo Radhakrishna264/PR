@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="prstudy-footer">
       <div className="footer-content">
         <div className="footer-brand">
-          <strong>{branding.name}</strong>
+          <strong>{branding.slogan.text}</strong>
         </div>
 
         <div className="footer-slogan">
