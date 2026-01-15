@@ -10,7 +10,7 @@
  - Any UI, metadata, watermark, SEO, or PDF engine must read from here
 */
 
-const branding = {
+export const branding = {
   name: "PRstudy",
 
   tagline: "Smart Learning & Test Platform",
