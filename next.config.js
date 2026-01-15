@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
 
   // 🔴 MOST IMPORTANT
-  output: "export",
+  output: "standalone",
 
   // 🔴 Cloudflare Pages ke liye
   images: {
