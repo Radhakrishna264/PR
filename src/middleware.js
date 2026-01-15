@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { getSession } from "./lib/session";
 
 /*
  PRstudy – Global Middleware (FINAL)
@@ -30,7 +29,7 @@ const USER_APP_PREFIX = "/dashboard";
 const ADMIN_PREFIX = "/admin-dashboard";
 
 export async function middleware(request) {
-  const { pathname } = request.nextUrl;
+  const pathname = request.nextUrl.pathname;
 
   // Ignore next internals, static files, api
   if (
@@ -47,9 +46,8 @@ export async function middleware(request) {
   }
 
   // Read session (server authoritative)
-  const session = await getSession(request);
-  const isLoggedIn = !!session;
-  const role = session?.role || null; // USER | ADMIN | SUPERADMIN
+  const isLoggedIn = request.cookies.has("session");
+const role = null; // USER | ADMIN | SUPERADMIN
 
   // Auth routes
   if (AUTH_ROUTES.some(route => pathname === route || pathname.startsWith(route + "/"))) {
